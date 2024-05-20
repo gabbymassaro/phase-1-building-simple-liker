@@ -4,7 +4,59 @@ const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
 
+document.getElementById("modal").hidden = true
 
+const hearts = document.getElementsByClassName("like-glyph")
+
+hearts[0].addEventListener('click', function() {
+  mimicServerCall()
+    .then(function(response) {
+      console.log(response, "I've been clicked!")
+    })
+    .catch(function(error){
+      console.log(error, "there's been an error!")
+    })
+})
+
+hearts[1].addEventListener('click', function() {
+  mimicServerCall()
+    .then(function(response) {
+      console.log(response, "I've been clicked!")
+    })
+    .catch(function(error){
+      console.log(error, "there's been an error!")
+    })
+})
+
+hearts[2].addEventListener('click', function() {
+  mimicServerCall()
+    .then(function(response) {
+      console.log(response, "I've been clicked!")
+    })
+    .catch(function(error){
+      console.log(error, "there's been an error!")
+    })
+})
+
+hearts[3].addEventListener('click', function() {
+  mimicServerCall()
+    .then(function(response) {
+      console.log(response, "I've been clicked!")
+    })
+    .catch(function(error){
+      console.log(error, "there's been an error!")
+    })
+})
+
+hearts[4].addEventListener('click', function() {
+  mimicServerCall()
+    .then(function(response) {
+      console.log(response, "I've been clicked!")
+    })
+    .catch(function(error){
+      console.log(error, "there's been an error!")
+    })
+})
 
 
 //------------------------------------------------------------------------------
