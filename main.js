@@ -4,73 +4,79 @@ const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
 
-document.getElementById("modal").hidden = true
+const errorModal = document.getElementById("modal")
+errorModal.classList.add("hidden")
 
 const hearts = document.getElementsByClassName("like-glyph")
 
 hearts[0].addEventListener('click', function() {
   mimicServerCall()
     .then(function(response) {
-      document.getElementById("modal").hidden = true
+      errorModal.classList.add("hidden")
       hearts[0].innerHTML = FULL_HEART
       hearts[0].classList.add("activated-heart")
     })
     .catch(function(error){
-      console.log(error, "there's been an error!")
-      document.getElementById("modal").hidden = false
-      hearts[0].classList.add("hidden")
+      errorModal.classList.remove("hidden")
+      setTimeout(errorModal.classList.remove("hidden"), 3000)
+      hearts[0].innerHTML = EMPTY_HEART
+      hearts[0].classList.remove("activated-heart")
     })
 })
 
 hearts[1].addEventListener('click', function() {
   mimicServerCall()
     .then(function(response) {
-      document.getElementById("modal").hidden = true
+      errorModal.classList.add("hidden")
       hearts[1].innerHTML = FULL_HEART
       hearts[1].classList.add("activated-heart")
     })
     .catch(function(error){
-      console.log(error, "there's been an error!")
-      document.getElementById("modal").hidden = false
+      setTimeout(errorModal.classList.remove("hidden"), 3000)
+      hearts[1].innerHTML = EMPTY_HEART
+      hearts[1].classList.remove("activated-heart")
     })
 })
 
 hearts[2].addEventListener('click', function() {
   mimicServerCall()
     .then(function(response) {
-      document.getElementById("modal").hidden = true
+      errorModal.classList.add("hidden")
       hearts[2].innerHTML = FULL_HEART
       hearts[2].classList.add("activated-heart")
     })
     .catch(function(error){
-      console.log(error, "there's been an error!")
-      document.getElementById("modal").hidden = false
+      setTimeout(errorModal.classList.remove("hidden"), 3000)
+      hearts[2].innerHTML = EMPTY_HEART
+      hearts[2].classList.remove("activated-heart")
     })
 })
 
 hearts[3].addEventListener('click', function() {
   mimicServerCall()
     .then(function(response) {
-      document.getElementById("modal").hidden = true
+      errorModal.classList.add("hidden")
       hearts[3].innerHTML = FULL_HEART
       hearts[3].classList.add("activated-heart")
     })
     .catch(function(error){
-      console.log(error, "there's been an error!")
-      document.getElementById("modal").hidden = false
+      setTimeout(errorModal.classList.remove("hidden"), 3000)
+      hearts[3].innerHTML = EMPTY_HEART
+      hearts[3].classList.remove("activated-heart")
     })
 })
 
 hearts[4].addEventListener('click', function() {
   mimicServerCall()
     .then(function(response) {
-      document.getElementById("modal").hidden = true
+      errorModal.classList.add("hidden")
       hearts[4].innerHTML = FULL_HEART
       hearts[4].classList.add("activated-heart")
     })
     .catch(function(error){
-      console.log(error, "there's been an error!")
-      document.getElementById("modal").hidden = false
+      setTimeout(errorModal.classList.remove("hidden"), 3000)
+      hearts[4].innerHTML = EMPTY_HEART
+      hearts[4].classList.remove("activated-heart")
     })
 })
 
